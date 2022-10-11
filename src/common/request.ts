@@ -29,7 +29,7 @@ class RequestService {
                 config.headers["X-Token"] = token ? token.token : ""
                 let urlMd5 = hexMD5(config.url)
                 if (that.requestList.includes(urlMd5)) {
-                    return
+                    return config
                 }
                 that.requestList.push(urlMd5)
                 return config
@@ -49,7 +49,7 @@ class RequestService {
 
                 if (res.code === 20001) {
                     window.location.href = '/login'
-                    return
+                    return res
                 }
                 if (res.code === 0) {
                     ElMessage({

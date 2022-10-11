@@ -1,6 +1,6 @@
 {
   "name": "vue-admin-skeleton",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "local": "cross-env VITE_APP_USE_MOCK='/admin/' vite",
     "dev": "vite",
